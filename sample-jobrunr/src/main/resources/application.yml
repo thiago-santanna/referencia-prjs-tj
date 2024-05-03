@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: sample-jobrunr
+  datasource:
+    url: jdbc:h2:file:./data/samplejobrunr
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+      defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+
+org:
+  jobrunr:
+    background-job-server:
+      enabled: true
+    dashboard:
+      enabled: true
+      username: tsswebapps
+      password: tsswebapps
+      port: 8000
